@@ -1,0 +1,39 @@
+{
+    "all": [
+        {"id": "8123", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "11/01/2021", "status": "Pending", "tags":[]},
+        {"id": "2141", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "12/01/2021", "status": "Pending", "tags":[]}, 
+        {"id": "5612", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "13/01/2021", "status": "Pending", "tags":[]},
+        {"id": "1254", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "14/01/2021", "status": "In progress", "tags":[]},
+        {"id": "5678", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "15/01/2021", "status": "In progress", "tags":[]},
+        {"id": "9012", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "16/01/2021", "status": "In progress", "tags":[]},
+        {"id": "1234", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "17/01/2021", "status": "In progress", "tags":[]},
+        {"id":"5108", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "18/01/2021", "status": "Completed", "tags":[]},
+        {"id":"5163", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "19/01/2021", "status": "Completed", "tags":[]}
+    ],
+    "byStatus": [
+        {
+            "status": "Pending",
+            "tasks": [
+                {"id": "8123", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "11/01/2021", "status": "Pending", "tags":[]},
+                {"id": "2141", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "12/01/2021", "status": "Pending", "tags":[]}, 
+                {"id": "5612", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "13/01/2021", "status": "Pending", "tags":[]}    
+            ]
+        },
+        {
+            "status": "In progress",
+            "tasks": [
+                {"id": "1254", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "14/01/2021", "status": "In progress", "tags":[]},
+                {"id": "5678", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "15/01/2021", "status": "In progress", "tags":[]},
+                {"id": "9012", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "16/01/2021", "status": "In progress", "tags":[]},
+                {"id": "1234", "description":"First task", "priority": "H", "due": "12/01/2021", "entry": "17/01/2021", "status": "In progress", "tags":[]}
+            ]
+        },
+        {
+            "status": "Completed",
+            "tasks": [
+                {"id":"5108", "description":"Second task", "priority": "M", "due": "12/01/2021", "entry": "18/01/2021", "status": "Completed", "tags":[]},
+                {"id":"5163", "description":"Third task", "priority": "L", "due": "12/01/2021", "entry": "19/01/2021", "status": "Completed", "tags":[]}
+            ]
+        }
+    ]
+}

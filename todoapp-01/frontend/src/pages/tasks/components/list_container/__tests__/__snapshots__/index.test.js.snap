@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/tasks/components/list_container Html should render correctly 1`] = `
+<div
+  class="active title"
+>
+  <i
+    aria-hidden="true"
+    class="dropdown icon"
+  />
+  All tasks
+</div>
+`;

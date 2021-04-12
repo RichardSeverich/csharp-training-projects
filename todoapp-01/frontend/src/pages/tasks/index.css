@@ -1,0 +1,10 @@
+.container {
+	width: 90%;
+	max-width: 1350px;
+	margin: 0 auto;
+}
+
+.modal .header {
+	background-color: #0f091a !important;
+	color: #f0ffff !important;
+}

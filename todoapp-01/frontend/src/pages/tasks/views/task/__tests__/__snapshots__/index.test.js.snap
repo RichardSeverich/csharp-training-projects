@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/tasks/views/task should render correctly 1`] = `
+<div
+  class="ui segment"
+>
+  <div
+    class="accordion ui styled"
+  >
+    <h3>
+      There is nothing.
+    </h3>
+  </div>
+</div>
+`;

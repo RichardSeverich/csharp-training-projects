@@ -1,0 +1,47 @@
+.ui.card {
+	z-index: 5;
+}
+
+.ui.card.Medium {
+	z-index: 5;
+	border-top: 4px solid #fbbd08;
+	padding-top: 8px;
+}
+
+.ui.card.High {
+	z-index: 5;
+	border-top: 4px solid #db2828;
+	padding-top: 8px;
+}
+
+.ui.card.Low {
+	z-index: 5;
+	border-top: 4px solid #21ba45;
+	padding-top: 8px;
+}
+
+.icon-card {
+	margin-top: 12px;
+	display: flex;
+	justify-content: center;
+}
+
+.icon-card-Medium {
+	margin-top: 2px, red;
+}
+
+.header {
+	text-align: left !important;
+	padding: 16px 0 16px 0;
+	font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.description {
+	text-align: left !important;
+	font-size: 1.1em;
+	padding: 4px 0 4px 0;
+	font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+.meta {
+	font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}

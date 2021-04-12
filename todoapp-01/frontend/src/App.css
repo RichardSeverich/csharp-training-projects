@@ -1,0 +1,7 @@
+.ui.menu {
+	margin: 0 !important;
+}
+
+.ui.pointing.menu {
+	margin-top: -6px !important;
+}

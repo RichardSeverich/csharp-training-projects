@@ -1,0 +1,17 @@
+i.thumbs.up.outline.massive.icon.confirmation-icon {
+	align-self: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.ui.card.confirmation {
+	margin-inline: auto;
+	margin-top: 50px;
+}
+
+.ui.card.confirmation > .content > .header {
+	text-align: center;
+}
+
+.ui.card.confirmation > .content > .buttons-container {
+	text-align: center;
+}

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/menu should match the snapshot 1`] = `
+<div
+  class="ui pointing menu"
+>
+  <a
+    class="item"
+    href="/"
+  >
+    Home
+  </a>
+  <a
+    class="item"
+    href="/projects"
+  >
+    Projects
+  </a>
+  <a
+    class="item"
+    href="/view-tasks"
+  >
+    Tasks
+  </a>
+  <a
+    class="item"
+    href="/tags"
+  >
+    Tags
+  </a>
+</div>
+`;

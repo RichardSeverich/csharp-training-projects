@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/header should match the snapshot 1`] = `
+<h1
+  class="ui header header-nav"
+>
+  <div
+    class="ui container"
+  >
+    <a
+      href="/"
+    >
+      ToDo
+    </a>
+  </div>
+</h1>
+`;

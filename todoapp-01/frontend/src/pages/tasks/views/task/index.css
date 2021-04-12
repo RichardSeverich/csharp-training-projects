@@ -1,0 +1,10 @@
+.ui.styled.accordion {
+	width: auto !important;
+	max-width: 1500px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.ui.accordion .title {
+	border-radius: 5px;
+}

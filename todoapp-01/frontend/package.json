@@ -1,0 +1,79 @@
+{
+	"name": "todo-app",
+	"version": "1.0.0",
+	"description": "Create a todo application with react",
+	"main": "src/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.fundacion-jala.org/dev-31/training/frontend-react/jsoliz.git"
+	},
+	"author": "Joel Soliz Choque <joel.soliz@fundacion-jala.org>",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.12.10",
+		"@babel/core": "^7.12.10",
+		"@babel/plugin-proposal-class-properties": "^7.12.1",
+		"@babel/plugin-transform-runtime": "^7.13.7",
+		"@babel/preset-env": "^7.12.11",
+		"@babel/preset-react": "^7.12.10",
+		"@testing-library/react": "^11.2.5",
+		"babel-eslint": "^10.1.0",
+		"babel-jest": "^26.6.3",
+		"babel-loader": "^8.2.2",
+		"browserslist": "^4.16.1",
+		"css-loader": "^5.0.1",
+		"eslint": "^7.17.0",
+		"eslint-config-prettier": "^7.1.0",
+		"eslint-plugin-jest": "^24.1.3",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"fetch-mock": "^9.11.0",
+		"file-loader": "^6.2.0",
+		"html-loader": "^1.3.2",
+		"html-webpack-plugin": "^4.5.1",
+		"jest": "^26.6.3",
+		"jsdoc": "^3.6.6",
+		"mini-css-extract-plugin": "^1.3.3",
+		"node-fetch": "^2.6.1",
+		"prettier": "^2.2.1",
+		"react-hot-loader": "^4.13.0",
+		"style-loader": "^2.0.0",
+		"stylelint": "^13.8.0",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-standard": "^20.0.0",
+		"stylelint-prettier": "^1.1.2",
+		"webpack": "^5.12.1",
+		"webpack-cli": "^4.3.1",
+		"webpack-dev-server": "^3.11.1",
+		"webpack-merge": "^5.7.3"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"eslint-plugin-jsdoc": "^30.7.13",
+		"lint-staged": "^10.5.3",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-router-dom": "^5.2.0",
+		"semantic-ui-css": "^2.4.1",
+		"semantic-ui-react": "^2.0.1"
+	},
+	"scripts": {
+		"build": "webpack --mode production",
+		"dev": "webpack serve --mode development --env development",
+		"lint": "eslint ./",
+		"lint:fix": "eslint ./ --fix",
+		"test": "jest"
+	},
+	"jest": {
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+			"\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+			"^helpers/(.*)": "<rootDir>/src/helpers/$1",
+			"^components/(.*)": "<rootDir>/src/components/$1",
+			"^context/(.*)": "<rootDir>/src/context/$1",
+			"^pages/(.*)": "<rootDir>/src/pages/$1",
+			"^api/(.*)": "<rootDir>/src/api/$1"
+		}
+	}
+}

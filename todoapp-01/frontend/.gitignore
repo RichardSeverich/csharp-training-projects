@@ -1,0 +1,8 @@
+# Editors or IDEs
+.vscode/
+
+# Project
+build/
+node_modules/
+docs/
+coverage/

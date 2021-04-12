@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/tasks/components/task_item Html Should render correctly 1`] = `
+<div
+  class="ui card Low"
+  id="1"
+>
+  <div
+    class="content"
+  >
+    <div
+      class="right aligned meta"
+    >
+      <i
+        aria-hidden="true"
+        class="calendar plus icon"
+      />
+       Due: 
+      No due date
+    </div>
+    <div
+      class="header"
+    >
+      Research about imaginary numbers
+    </div>
+    <div
+      class="description"
+    >
+      Task 
+      Completed
+    </div>
+    <div
+      class="left aligned meta"
+    >
+      <i
+        aria-hidden="true"
+        class="calendar plus icon"
+      />
+       Created on: 
+      12/12/2020
+    </div>
+    <br />
+    <div
+      class="meta"
+    >
+      No tags present
+    </div>
+  </div>
+  <div
+    class="extra content"
+  >
+    <div
+      class="ui two buttons"
+    >
+      <button
+        class="ui red inverted button"
+        title="Delete task"
+      >
+        <i
+          aria-hidden="true"
+          class="trash icon"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

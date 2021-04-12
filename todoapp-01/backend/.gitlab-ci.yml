@@ -1,0 +1,23 @@
+image: mcr.microsoft.com/dotnet/core/sdk:latest
+
+stages:
+    - build
+    - test
+
+variables:
+    test: "Dev31.TodoApp.tests"
+
+before_script:
+    - "dotnet restore"
+
+build:
+    stage: build
+    script:
+        - "dotnet build"
+
+test:
+    stage: test
+    script: 
+        - "cd Dev31.TodoApp.tests"
+        - "dotnet test /p:CollectCoverage=true"
+    coverage: '/Total.*?(\d+(?:\.\d+)?)%/'

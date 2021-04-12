@@ -1,0 +1,20 @@
+.priority {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.priority-High {
+	box-shadow: 0 0 10px 5px #f70000 inset;
+}
+
+.priority-Medium {
+	box-shadow: 0 0 10px 5px #dff839 inset;
+}
+
+.priority-Low {
+	box-shadow: 0 0 10px 5px #00fc11 inset;
+}
