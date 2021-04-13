@@ -1,0 +1,42 @@
+parameters:
+  - name: id
+    in: path
+    required: true
+    description: resource identifier.
+    schema:
+      type: number
+
+get:
+  description: retrieve by id
+  responses:
+    "200":
+      description: resource retrieved successfully
+      content:
+        "application/json":
+          schema:
+            $ref: "./../schemas/schema-task.yaml#/Task"
+
+put:
+  description: update
+  requestBody:
+    content:
+      "application/json":
+        schema:
+          $ref: "./../schemas/schema-task.yaml#/Task"
+  responses:
+    "204":
+      description: resource updated successfully
+      content:
+        "application/json":
+          schema:
+            $ref: "./../schemas/schema-message.yaml#/Message"
+
+delete:
+  description: delete
+  responses:
+    "202":
+      description: resource deleted successfully
+      content:
+        "application/json":
+          schema:
+            $ref: "./../schemas/schema-message.yaml#/Message"
