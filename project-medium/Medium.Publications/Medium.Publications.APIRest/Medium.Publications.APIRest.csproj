@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>03ece930-b54e-4cb1-a680-bef7a4fac218</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Medium.Publications.Application\Medium.Publications.Application.csproj" />
+    <ProjectReference Include="..\Medium.Publications.Repositories.Mongo\Medium.Publications.Repositories.Mongo.csproj" />
+    <ProjectReference Include="..\Medium.Publications.Services\Medium.Publications.Services.csproj" />
+  </ItemGroup>
+
+</Project>
