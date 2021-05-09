@@ -44,7 +44,35 @@ user: root
 pass: root
 ```
 
-#### 2. Install RabbitMQ 3.8.14 in docker container.
+#### 3. Install MySQL 5 in docker container.
+1. Dowload the image:
+``` docker pull mysql:5 ```
+2. Create and start mongo db docker container with:
+``` docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=secret123 -p 3306:3306 mysql:5 ```
+3. Create data base: ``` medium_accounts ```
+4. Credentials:
+```
+host: localhost/ip
+port: 3306
+dbname: medium_accounts
+user: root
+pass: secret123
+```
+
+#### 4. Install cassandra:3.11.4 in docker container.
+1. Dowload the image: ``` docker pull cassandra:3.11.4 ```
+2. Create and start mongo db docker container with: ``` docker run -d --name cassandradb  -p 7000:7000  cassandra:3.11.4 ```
+3. Enter cassandra bash: ```docker exec -it some-cassandra bash```
+3. Credentials:
+```
+host: localhost/ip
+port: 7000
+dbname: posts_accounts
+user: 
+pass:
+```
+
+#### 5. Install RabbitMQ 3.8.14 in docker container.
 1. Dowload the image:
 ``` docker pull rabbitmq:3.8.14-management ```
 2. Start container with:
