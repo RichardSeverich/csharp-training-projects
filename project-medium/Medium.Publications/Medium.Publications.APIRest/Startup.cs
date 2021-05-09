@@ -37,11 +37,10 @@ namespace Medium.Publications.APIRest
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-
             builder.Register(c => new ConfigConnection(new ConfigSettings()
             {
-                ConnectionString = "mongodb://root:root@localhost:27017",
-                DatabaseName = "medium_publications"
+                ConnectionString = Configuration["ConnectionSettings:ConnectionString"],
+                DatabaseName = Configuration["ConnectionSettings:DatabaseName"]
             }));
 
             builder.RegisterAssemblyTypes(typeof(PublicationMongoRepository).Assembly)
