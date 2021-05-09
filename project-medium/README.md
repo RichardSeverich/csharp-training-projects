@@ -91,11 +91,11 @@ Search microservices  : https://localhost:5004/swagger/index.html
 
 ### Publications microservices endpoints:  
 
-GET: ```https://localhost:5001/publication```
-GET: ```https://localhost:5001/publication/{id}```
-GET: ```https://localhost:5001/publication/author/{author}```
-DELETE: ```https://localhost:5001/publication/{id}```
-POST: ```https://localhost:5001/publication```
+- GET: ```https://localhost:5001/publication```
+- GET: ```https://localhost:5001/publication/{id}```
+- GET: ```https://localhost:5001/publication/author/{author}```
+- DELETE: ```https://localhost:5001/publication/{id}```
+- POST: ```https://localhost:5001/publication```
 Body:
 ```
 {
@@ -103,7 +103,7 @@ Body:
   "Author": "srichard"
 }
 ```
-PUT: ```https://localhost:5001/publication/{id}```
+- PUT: ```https://localhost:5001/publication/{id}```
 Body:
 ```
 {
