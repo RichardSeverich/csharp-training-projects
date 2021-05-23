@@ -1,9 +1,11 @@
 using Autofac;
 using MediatR.Extensions.Autofac.DependencyInjection;
 using Medium.Publications.Domain.Factories;
+using Medium.Publications.RabbitMQEventBus;
 using Medium.Publications.Repositories.Mongo;
 using Medium.Publications.Repositories.Mongo.Config;
 using Medium.Publications.Services;
+using Medium.Publications.Services.EventBus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -39,9 +41,16 @@ namespace Medium.Publications.APIRest
         {
             builder.Register(c => new ConfigConnection(new ConfigSettings()
             {
-                ConnectionString = Configuration["ConnectionSettings:ConnectionString"],
-                DatabaseName = Configuration["ConnectionSettings:DatabaseName"]
+                ConnectionString = Configuration["ConnectionSettingsMongoDB:ConnectionString"],
+                DatabaseName = Configuration["ConnectionSettingsMongoDB:DatabaseName"]
             }));
+
+            builder.Register(c => new RabbitMQEventBus.RabbitMQEventBus(
+                new RabbitMqConnectionSettings(
+                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQHostAndPort"],
+                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQUser"],
+                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQPassword"])))
+                .As<IEventBus>();
 
             builder.RegisterMediatR(typeof(PublicationFactory).Assembly);
 

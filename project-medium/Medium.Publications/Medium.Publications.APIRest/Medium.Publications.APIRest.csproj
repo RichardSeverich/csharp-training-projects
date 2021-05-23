@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Medium.Publications.RabbitMQEventBus\Medium.Publications.RabbitMQEventBus.csproj" />
     <ProjectReference Include="..\Medium.Publications.Repositories.Mongo\Medium.Publications.Repositories.Mongo.csproj" />
     <ProjectReference Include="..\Medium.Publications.Services\Medium.Publications.Services.csproj" />
   </ItemGroup>
