@@ -33,6 +33,7 @@ namespace Medium.Publications.Services
         public void Create(string title, string author) {
             var publication = _publicationFactory.Create(title, author, "");
             _publicationRepository.Create(publication);
+            publication.Publish();
             PublishEvents(publication);
         }
 

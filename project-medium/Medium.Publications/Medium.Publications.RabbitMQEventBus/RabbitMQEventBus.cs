@@ -17,7 +17,11 @@ namespace Medium.Publications.RabbitMQEventBus
         public RabbitMQEventBus(RabbitMqConnectionSettings connectionSettings)
         {
             _connectionSettings = connectionSettings;
-            _connectionFactory = new ConnectionFactory() { HostName = _connectionSettings.Host };
+            _connectionFactory = new ConnectionFactory() {
+                HostName = _connectionSettings.Host,
+                UserName = _connectionSettings.UserName,
+                Password = _connectionSettings.Password
+            };
             _connection = _connectionFactory.CreateConnection();
         }
 

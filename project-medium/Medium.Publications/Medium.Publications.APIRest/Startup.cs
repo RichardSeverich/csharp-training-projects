@@ -12,7 +12,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
 using System.Linq;
 
 namespace Medium.Publications.APIRest
@@ -47,7 +46,8 @@ namespace Medium.Publications.APIRest
 
             builder.Register(c => new RabbitMQEventBus.RabbitMQEventBus(
                 new RabbitMqConnectionSettings(
-                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQHostAndPort"],
+                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQHost"],
+                    Configuration["ConnectionSettingsRabbitMQ:RabbitMQPort"],
                     Configuration["ConnectionSettingsRabbitMQ:RabbitMQUser"],
                     Configuration["ConnectionSettingsRabbitMQ:RabbitMQPassword"])))
                 .As<IEventBus>();
