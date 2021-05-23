@@ -1,4 +1,5 @@
 ﻿using Medium.Publications.Domain.Entities;
+using Medium.Publications.Domain.Events;
 using Medium.Publications.Domain.ValueObjects;
 using System;
 
@@ -21,6 +22,7 @@ namespace Medium.Publications.Domain.Factories
                 Author = author,
                 Content = publicationContent
             };
+            var publishedEvent = new PublicationPublished(publication, "1", DateTime.Now);
             return publication;
         }
     }

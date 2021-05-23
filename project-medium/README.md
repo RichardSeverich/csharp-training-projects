@@ -107,7 +107,7 @@ Follow this order of deployment when running the application:
 5. Enter Medium.Search and/Medium.Search.APIRest execute  ```dotnet run```.
 
 
-## Documentation
+## Documentation 🔍
 
 After running backend services you can see endpoints documentation on the following URLs:
 ```
@@ -140,7 +140,7 @@ Body:
 }
 ```
 
-## Contributing
+## Contributing 💡
 
 1. Clone it!
 2. Create your feature branch: `git checkout -b FeatureSomeFeatureName`

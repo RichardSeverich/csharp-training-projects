@@ -1,5 +1,5 @@
 using Autofac;
-using Medium.Publications.Application;
+using MediatR.Extensions.Autofac.DependencyInjection;
 using Medium.Publications.Domain.Factories;
 using Medium.Publications.Repositories.Mongo;
 using Medium.Publications.Repositories.Mongo.Config;
@@ -43,6 +43,10 @@ namespace Medium.Publications.APIRest
                 DatabaseName = Configuration["ConnectionSettings:DatabaseName"]
             }));
 
+            builder.RegisterMediatR(typeof(PublicationFactory).Assembly);
+
+            builder.RegisterMediatR(typeof(PublicationServices).Assembly);
+
             builder.RegisterAssemblyTypes(typeof(PublicationMongoRepository).Assembly)
                     .Where(c => c.Name.EndsWith("Repository"))
                     .AsImplementedInterfaces();
@@ -53,10 +57,6 @@ namespace Medium.Publications.APIRest
 
             builder.RegisterAssemblyTypes(typeof(PublicationServices).Assembly)
                     .Where(c => c.Name.EndsWith("Services"))
-                    .AsSelf();
-
-            builder.RegisterAssemblyTypes(typeof(App).Assembly)
-                    .Where(c => c.Name.EndsWith("App"))
                     .AsSelf();
         }
 

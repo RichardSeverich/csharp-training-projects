@@ -1,5 +1,5 @@
 ﻿using Medium.Publications.APIRest.Dto;
-using Medium.Publications.Application;
+using Medium.Publications.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,17 +11,17 @@ namespace Medium.Publications.APIRest.Controllers
     [Route("[controller]")]
     public class PublicationController : ControllerBase
     {
-        private readonly App _app;
+        private readonly PublicationServices _publicationServices;
 
-        public PublicationController(App app)
+        public PublicationController(PublicationServices publicationServices)
         {
-            _app = app;
+            _publicationServices = publicationServices;
         }
 
         [HttpGet()]
         public IEnumerable<PublicationDTO> GetAll()
         {
-            return _app.publicationServices.GetAll()
+            return _publicationServices.GetAll()
                 .Select(p => PublicationDTO.FromEntity(p));
         }
 
@@ -29,34 +29,34 @@ namespace Medium.Publications.APIRest.Controllers
         public PublicationDTO GetById(Guid id)
         {
             return PublicationDTO
-                .FromEntity(_app.publicationServices.GetById(id.ToString()));
+                .FromEntity(_publicationServices.GetById(id.ToString()));
         }
 
         [HttpGet("author/{author}")]
         public IEnumerable<PublicationDTO> GetByAuthor(String author)
         {
-            return _app.publicationServices.FindByAuthor(author)
+            return _publicationServices.FindByAuthor(author)
                 .Select(p => PublicationDTO.FromEntity(p));
         }
 
         [HttpPost()]
         public String Post([FromBody] PublicationDTO publicationDTO)
         {
-            _app.publicationServices.Create(publicationDTO.Title, publicationDTO.Author);
+            _publicationServices.Create(publicationDTO.Title, publicationDTO.Author);
             return "Created";
         }
 
         [HttpDelete("{id}")]
         public String Delete(Guid id)
         {
-            _app.publicationServices.Delete(id.ToString());
+            _publicationServices.Delete(id.ToString());
             return "Deleted";
         }
 
         [HttpPut("{id}")]
         public String Update(Guid id, [FromBody] PublicationDTO publicationDTO)
         {
-            _app.publicationServices.Update(id.ToString(), publicationDTO.ToEntity());
+            _publicationServices.Update(id.ToString(), publicationDTO.ToEntity());
             return "Updated";
         }
 

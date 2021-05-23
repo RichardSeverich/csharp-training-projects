@@ -1,19 +1,20 @@
-﻿using Medium.Publications.Domain.Entities;
+﻿using MediatR;
+using Medium.Publications.Domain.Entities;
 using Medium.Publications.Domain.Factories;
 using Medium.Publications.Domain.Repositories;
 using System.Collections.Generic;
 
 namespace Medium.Publications.Services
 {
-    public class PublicationServices
+    public class PublicationServices: EntityService<Publication>
     {
         private PublicationFactory _publicationFactory;
         private IPublicationRepository _publicationRepository;
         public PublicationServices(
             PublicationFactory publicationFactory,
-            IPublicationRepository publicationRepository
-
-            )
+            IPublicationRepository publicationRepository,
+            IMediator mediator
+            ) : base(mediator)
         {
             _publicationFactory = publicationFactory;
             _publicationRepository = publicationRepository;
@@ -32,6 +33,7 @@ namespace Medium.Publications.Services
         public void Create(string title, string author) {
             var publication = _publicationFactory.Create(title, author, "");
             _publicationRepository.Create(publication);
+            PublishEvents(publication);
         }
 
         public void Update(string id, Publication publication) {
