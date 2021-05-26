@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Medium.Posts.Application\Medium.Posts.Application.csproj" />
+    <ProjectReference Include="..\Medium.Posts.DomainServices\Medium.Posts.DomainServices.csproj" />
+    <ProjectReference Include="..\Medium.Posts.RabbitMQEventBus\Medium.Posts.RabbitMQEventBus.csproj" />
+    <ProjectReference Include="..\Medium.Posts.Repositories.Mongo\Medium.Posts.Repositories.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>

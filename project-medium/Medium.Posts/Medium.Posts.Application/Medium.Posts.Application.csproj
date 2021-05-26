@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\**" />
+    <Compile Remove="DomainEventHandler\**" />
+    <Compile Remove="Queries\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <EmbeddedResource Remove="DomainEventHandler\**" />
+    <EmbeddedResource Remove="Queries\**" />
+    <None Remove="Commands\**" />
+    <None Remove="DomainEventHandler\**" />
+    <None Remove="Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Medium.Posts.DomainServices\Medium.Posts.DomainServices.csproj" />
+  </ItemGroup>
+
+</Project>

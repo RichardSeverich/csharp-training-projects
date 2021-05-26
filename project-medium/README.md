@@ -33,6 +33,9 @@ Follow these instructions if you are using docker.
 ``` mongo```
 5. Create db
 ``` use medium_publications```
+``` use medium_posts```
+``` use medium_accounts```
+``` use medium_search```
 6. Exit:
 ``` exit ```
 7. Credentials:
