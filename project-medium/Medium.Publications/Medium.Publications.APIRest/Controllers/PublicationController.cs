@@ -42,7 +42,10 @@ namespace Medium.Publications.APIRest.Controllers
         [HttpPost()]
         public String Post([FromBody] PublicationDTO publicationDTO)
         {
-            _publicationServices.Create(publicationDTO.Title, publicationDTO.Author);
+            _publicationServices.Create(
+                publicationDTO.BlogId,
+                publicationDTO.Title,
+                publicationDTO.Author);
             return "Created";
         }
 

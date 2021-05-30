@@ -7,8 +7,11 @@ namespace Medium.Publications.Repositories.Mongo.Documents
     public class PostDocument
     {
         [BsonId]
-
         public string Id { get; set; }
+
+        public string PublicationId { get; set; }
+
+        public string BlogId { get; set; }
 
         public string Title { get; set; }
 
@@ -26,6 +29,8 @@ namespace Medium.Publications.Repositories.Mongo.Documents
             return new PostDocument
             {
                 Id = entity.Id.ToString(),
+                PublicationId = entity.PublicationId.ToString(),
+                BlogId = entity.BlogId.ToString(),
                 Title = entity.Title,
                 Content = entity.Content,
                 Author = entity.Author,
@@ -39,6 +44,8 @@ namespace Medium.Publications.Repositories.Mongo.Documents
             return new Post
             {
                 Id = Guid.Parse(Id),
+                PublicationId = Guid.Parse(PublicationId),
+                BlogId = Guid.Parse(BlogId),
                 Title = Title,
                 Content = Content,
                 Author = Author,

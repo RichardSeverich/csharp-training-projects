@@ -8,6 +8,8 @@ namespace Medium.Posts.Domain.PostAggregate
 
         public Guid PublicationId { get; set; }
 
+        public Guid BlogId { get; set; }
+
         public string Title { get; set; }
 
         public string Content { get; set; }
@@ -17,6 +19,8 @@ namespace Medium.Posts.Domain.PostAggregate
         public string Avatar { get; set; }
 
         public DateTime ReleaseDate { get; set; }
+
+        public int Claps { get; set; }
 
         public Post() {
             ReleaseDate = DateTime.Now;

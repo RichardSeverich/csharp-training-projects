@@ -142,6 +142,63 @@ Body:
   "Author": "cjuan"
 }
 ```
+## Diagrams
+
+### Diagram - General DDD
+<p align="center">
+  <img src="Documentation/Diagram-DDD.png">
+</p>
+
+### Diagram - DDD - Strategic Design
+<p align="center">
+  <img src="Documentation/Diagram-Strategic-Design.png">
+</p>
+
+### Diagram - DDD - Tactical Design
+<p align="center">
+  <img src="Documentation/Diagram-Tactical-Design.png">
+</p>
+
+### Diagram - DDD - Tactical Design
+<p align="center">
+  <img src="Documentation/Diagram-Microservices.png">
+</p>
+
+### Diagram - Class 📉
+<p align="center">
+  <img src="Documentation/Diagram-Class.png">
+</p>
+
+### Diagram - Usecases
+<p align="center">
+  <img src="Documentation/Diagram-Usecases.png">
+</p>
+
+### Diagram - Medium Publication Domain Classes
+<p align="center">
+  <img src="Documentation/Medium-Publication-Domain-Diagram-Class.jpg">
+</p>
+
+### Diagram - Medium Publication Services Classes
+<p align="center">
+  <img src="Documentation/Medium-Publication-Services-Diagram-Class.jpg">
+</p>
+
+### Medium Publication Post Request
+<p align="center">
+  <img src="Documentation/Medium-Publication-PostRequest.jpg">
+</p>
+
+### Medium Publication Get Request
+<p align="center">
+  <img src="Documentation/Medium-Publication-GetRequest.jpg">
+</p>
+
+### Medium Post Get Request
+<p align="center">
+  <img src="Documentation/Medium-Post-GetRequest.jpg">
+</p>
+
 
 ## Contributing 💡
 

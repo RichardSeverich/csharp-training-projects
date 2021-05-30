@@ -30,8 +30,8 @@ namespace Medium.Publications.Services
             return _publicationRepository.GetById(id);
         }
 
-        public void Create(string title, string author) {
-            var publication = _publicationFactory.Create(title, author, "");
+        public void Create(string blogId, string title, string author) {
+            var publication = _publicationFactory.Create(blogId, title, author, "");
             _publicationRepository.Create(publication);
             publication.Publish();
             PublishEvents(publication);

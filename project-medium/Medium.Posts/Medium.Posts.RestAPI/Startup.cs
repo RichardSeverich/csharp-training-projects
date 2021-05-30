@@ -3,6 +3,7 @@ using Autofac;
 using Medium.Posts.Application;
 using Medium.Posts.Application.EventBus;
 using Medium.Posts.Application.IntegrationEventHandler;
+using Medium.Posts.Domain.Factories;
 using Medium.Posts.DomainServices;
 using Medium.Posts.RabbitMQEventBus;
 using Medium.Publications.Repositories.Mongo;
@@ -47,6 +48,10 @@ namespace Medium.Posts.RestAPI
             builder.RegisterAssemblyTypes(typeof(PostMongoRepository).Assembly)
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces();
+            
+            builder.RegisterAssemblyTypes(typeof(PostFactory).Assembly)
+                   .Where(c => c.Name.EndsWith("Factory"))
+                   .AsSelf();
 
             builder.RegisterAssemblyTypes(typeof(PostsService).Assembly)
                 .Where(t => t.Name.EndsWith("Service"))

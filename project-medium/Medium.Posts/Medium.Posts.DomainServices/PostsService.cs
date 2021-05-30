@@ -1,4 +1,5 @@
 ﻿using Medium.Posts.Domain.PostAggregate;
+using Medium.Posts.Domain.Repositories;
 using System.Collections.Generic;
 
 namespace Medium.Posts.DomainServices

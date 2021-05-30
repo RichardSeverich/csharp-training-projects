@@ -1,4 +1,5 @@
 ﻿using Medium.Posts.Domain.PostAggregate;
+using Medium.Posts.Domain.Repositories;
 using Medium.Publications.Repositories.Mongo.Config;
 using Medium.Publications.Repositories.Mongo.Documents;
 using MongoDB.Driver;
@@ -30,13 +31,13 @@ namespace Medium.Publications.Repositories.Mongo
                 .Find<PostDocument>(p => p.Id == id).FirstOrDefault().ToEntity();
         }
 
-        public void Create(Post publication)
+        public void Create(Post post)
         {
-             _mongo.Posts.InsertOne(PostDocument.FromEntity(publication));
+             _mongo.Posts.InsertOne(PostDocument.FromEntity(post));
         }
-        public void Update(string id, Post publication)
+        public void Update(string id, Post post)
         {
-            _mongo.Posts.ReplaceOne(p => p.Id == id, PostDocument.FromEntity(publication));
+            _mongo.Posts.ReplaceOne(p => p.Id == id, PostDocument.FromEntity(post));
         }
         public void Delete(string id)
         {

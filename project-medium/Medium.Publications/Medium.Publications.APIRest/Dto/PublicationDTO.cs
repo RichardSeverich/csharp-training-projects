@@ -8,6 +8,8 @@ namespace Medium.Publications.APIRest.Dto
     {
         public string Id { get; set; }
 
+        public string BlogId { get; set; }
+
         public string Title { get; set; }
 
         public string Author { get; set; }
@@ -19,6 +21,7 @@ namespace Medium.Publications.APIRest.Dto
             return new PublicationDTO
             {
                 Id = entity.Id.ToString(),
+                BlogId = entity.BlogId.ToString(),
                 Title = entity.Title,
                 Author = entity.Author,
                 Content = entity.Content
@@ -30,6 +33,7 @@ namespace Medium.Publications.APIRest.Dto
             return new Publication
             {
                 Id = Guid.Parse(Id),
+                BlogId = Guid.Parse(BlogId),
                 Title = Title,
                 Author = Author,
                 Content = Content

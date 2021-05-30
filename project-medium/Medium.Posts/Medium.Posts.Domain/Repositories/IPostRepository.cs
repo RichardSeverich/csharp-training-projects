@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Medium.Posts.Domain.PostAggregate;
 
-namespace Medium.Posts.Domain.PostAggregate
+namespace Medium.Posts.Domain.Repositories
 {
     public interface IPostRepository
     {

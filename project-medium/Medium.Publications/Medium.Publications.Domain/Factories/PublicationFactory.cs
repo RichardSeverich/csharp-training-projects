@@ -8,7 +8,12 @@ namespace Medium.Publications.Domain.Factories
 {
     public class PublicationFactory
     {
-        public Publication Create(String title, String author, String content)
+        public Publication Create(
+            String blogId,
+            String title,
+            String author, 
+            String content
+            )
         {
             var publicationContent = new PublicationContent 
             {
@@ -18,6 +23,7 @@ namespace Medium.Publications.Domain.Factories
             var publication = new Publication
             {
                 Id = Guid.NewGuid(),
+                BlogId = Guid.Parse(blogId),
                 Title = title,
                 Author = author,
                 Content = publicationContent
