@@ -119,6 +119,9 @@ Posts microservices  : https://localhost:5007/swagger/index.html
 Accounts microservices  : https://localhost:5009/swagger/index.html
 Search microservices  : https://localhost:5011/swagger/index.html
 
+Gateway Ocelot without auth : https://localhost:5001/
+Gateway Ocelot with auth token : https://localhost:5001/
+
 ```
 ### API Gateway Ocelot:
 HTTPS
@@ -136,6 +139,15 @@ HTTPS
 - DELETE: ```https://localhost:5001/posts/{id}```
 - PUT: ```https://localhost:5001/posts`
 - POST: ```https://localhost:5001/posts`
+
+
+### Accounts microservices endpoints:
+
+Default Username: Richard.Severich
+Default Password: MySecretPass
+
+- GET: ```http://localhost:5008/auth?username=Richard.Severich&password=MySecretPass```
+- GET: ```https://localhost:5009/auth?username=Richard.Severich&password=MySecretPass```
 
 ### Publications microservices endpoints:  
 
@@ -265,6 +277,16 @@ Schema:
 ### DataBasesMongo
 <p align="center">
   <img src="Documentation/DataBasesMongo.jpg">
+</p>
+
+### API Gateway request token example
+<p align="center">
+  <img src="Documentation/RequestTokenExample.jpg">
+</p>
+
+### API Gateway request with token example
+<p align="center">
+  <img src="Documentation/RequestWithTokenExample.jpg">
 </p>
 
 ## Contributing 💡
