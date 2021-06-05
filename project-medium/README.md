@@ -114,34 +114,96 @@ Follow this order of deployment when running the application:
 
 After running backend services you can see endpoints documentation on the following URLs:
 ```
-Publications microservices  : https://localhost:5001/swagger/index.html
-Posts microservices  : https://localhost:5002/swagger/index.html
-Accounts microservices  : https://localhost:5003/swagger/index.html
-Search microservices  : https://localhost:5004/swagger/index.html
-```
+Publications microservices  : https://localhost:5005/swagger/index.html
+Posts microservices  : https://localhost:5007/swagger/index.html
+Accounts microservices  : https://localhost:5009/swagger/index.html
+Search microservices  : https://localhost:5011/swagger/index.html
 
-### Publications microservices endpoints:  
+```
+### API Gateway Ocelot:
+HTTPS
 
 - GET: ```https://localhost:5001/publication```
 - GET: ```https://localhost:5001/publication/{id}```
 - GET: ```https://localhost:5001/publication/author/{author}```
 - DELETE: ```https://localhost:5001/publication/{id}```
-- POST: ```https://localhost:5001/publication```
-Body:
+- POST: ```https://localhost:5001/publication``
+- POST: ```https://localhost:5001/publication`
+
+- GET: ```https://localhost:5001/posts```
+- GET: ```https://localhost:5001/posts/{id}```
+- GET: ```https://localhost:5001/posts/author/{author}```
+- DELETE: ```https://localhost:5001/posts/{id}```
+- PUT: ```https://localhost:5001/posts`
+- POST: ```https://localhost:5001/posts`
+
+### Publications microservices endpoints:  
+
+HTTP
+
+- GET: ```http://localhost:5004/publication```
+- GET: ```http://localhost:5004/publication/{id}```
+- GET: ```http://localhost:5004/publication/author/{author}```
+- DELETE: ```http://localhost:5004/publication/{id}```
+- PUT: ```http://localhost:5004/publication``
+- POST: ```http://localhost:5004/publication`
+
+HTTPS
+
+- GET: ```https://localhost:5005/publication```
+- GET: ```https://localhost:5005/publication/{id}```
+- GET: ```https://localhost:5005/publication/author/{author}```
+- DELETE: ```https://localhost:5005/publication/{id}```
+- PUT: ```https://localhost:5005/publication/{id}```
+- POST: ```https://localhost:5005/publication```
+
+Schema::
 ```
 {
-  "Title": "programming pillars",
-  "Author": "srichard"
+  "BlogId": "123e4567-e89b-12d3-a456-426614174000",
+  "Title": "Continous Integration in GitLab 200",
+  "Author": "richardseverich"
 }
 ```
-- PUT: ```https://localhost:5001/publication/{id}```
-Body:
+
+### Posts microservices endpoints:  
+s
+HTTP
+
+- GET: ```http://localhost:5006/posts```
+- GET: ```http://localhost:5006/posts/{id}```
+- DELETE: ```http://localhost:5006/posts/{id}```
+- PUT: ```http://localhost:5006/posts`
+- POST: ```http://localhost:5006/posts`
+
+HTTPS
+
+- GET: ```https://localhost:5007/posts```
+- GET: ```https://localhost:5007/posts/{id}```
+- DELETE: ```https://localhost:5007/posts/{id}```
+- PUT: ```https://localhost:5007/posts``
+- POST: ```https://localhost:5007/posts``
+
+Schema:
+
 ```
 {
-  "Title": "programming pillars",
-  "Author": "cjuan"
-}
+  "id": "0e34cfb9-1d34-4bbb-b2be-c1d222db7f14",
+  "blogId": "123e4567-e89b-12d3-a456-426614174000",
+  "publicationId": "6907fda2-e602-4be1-96f9-ae63e0d971a4",
+  "title": "Continous Integration in GitLab 1",
+  "content": "",
+  "author": {
+    "id": "a6e73af6-0c6d-425a-a14b-95588e2c6317",
+    "username": "richardseverich",
+    "fullName": "Default Full Name",
+    "email": "Default Email"
+  },
+  "avatar": "",
+  "releaseDate": "2021-05-30T22:52:01.83Z"
+},
 ```
+
 ## Diagrams
 
 ### Diagram - General DDD
@@ -199,6 +261,11 @@ Body:
   <img src="Documentation/Medium-Post-GetRequest.jpg">
 </p>
 
+
+### DataBasesMongo
+<p align="center">
+  <img src="Documentation/DataBasesMongo.jpg">
+</p>
 
 ## Contributing 💡
 

@@ -40,11 +40,12 @@ namespace Medium.Posts.RabbitMQEventBus
             };
             _connection = _connectionFactory.CreateConnection();
             _consumerChannel = CreateConsumerChannel();
+           
+            using var channel = CreateConsumerChannel();
+            channel.ExchangeDeclare(BROKER_NAME, ExchangeType.Direct);
+            channel.QueueDeclare(QUEUE_NAME, false, false, false, null);
+            channel.QueueBind(QUEUE_NAME, BROKER_NAME, ROUTING_KEY, null);
 
-            /*_consumerChannel.ExchangeDeclare(BROKER_NAME, ExchangeType.Direct);
-            _consumerChannel.QueueDeclare(QUEUE_NAME, false, false, false, null);
-            _consumerChannel.QueueBind(QUEUE_NAME, BROKER_NAME, ROUTING_KEY, null);
-            _consumerChannel.QueueDeclare(QUEUE_NAME, true);*/
             _subscriptionManager = subscriptionManager;
             _diContainer = diContainer;
         }
